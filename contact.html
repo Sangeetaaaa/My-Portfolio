@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Sangeeta Shetty</title>
+    <link rel="icon" href="ico1.ico">
+
+    <!-- meta tags  -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap script  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font-awesome link  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light container">
+        <a class="navbar-brand " href="#"><b>Sangeeta Shetty</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-3 ml-3 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link mr-2" href="./home.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mr-2" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>  
+</nav>
+
+
+    <div class="container mt-5">
+        <h2 class="mb-5">Hey ! Send me a message</h2>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+              </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Gmail</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" name="gmail" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="4"></textarea>
+            </div>
+            <p class="mt-3 success__message">I got your message. I'll come back to you as soon as I get some free time</p>
+          <p class="mt-3 failure__message">Something went wrong</p>
+            <button type="submit" class="btn btn-primary mb-5">Send</button>
+          </form>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+//         function validateForm(e) {
+//     var name = document.forms["myForm"]["name"].value;
+//     var email = document.forms["myForm"]["email"].value
+//     var phone = document.forms["myForm"]["phone"].value;
+
+//     if (name === "") {
+//       alert("Name must be filled out");
+//       e.preventDefault();
+//     } else if (email === "" && phone === "") {
+//         alert('Email or Phone no must be filled out');
+//         e.preventDefault();
+//     }
+//     else {
+//         sendEmail(e);
+//     }
+//   }
+
+
+
+  $('#myForm').on('submit', function(event) {
+    event.preventDefault(); // prevent reload
+    
+    var formData = new FormData(this);
+    formData.append('service_id', 'service_e6j9eho');
+    formData.append('template_id', 'template_m7cz7x6');
+    formData.append('user_id', 'user_hnoVKOBKOpwcVV4rYrQUB');
+ 
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false, // auto-detection
+        processData: false // no need to parse formData to string
+    }).done(function() {
+        document.querySelector('.success__message').style.display = 'block';
+    }).fail(function(error) {
+        document.querySelector('.failure__message').style.display = 'block';
+    });
+});
+
+
+    </script>
+</body>
+</html>

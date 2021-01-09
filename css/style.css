@@ -3,16 +3,8 @@ body {
 }
 
 h1 {
-    text-shadow: 2px 3px #ef4f4f, 2px 5px #74c7b8;
+    text-shadow: 2px 2px black;
 }
-
-h1:hover {
-    text-shadow: 2px 3px #74c7b8, 2px 5px #ef4f4f;
-}
-
-h4:hover, .work li:hover {
-    text-shadow: 2px 3px #74c7b8, 2px 5px #ef4f4f;
-} 
 
 .success__message {
     display: none;
@@ -80,19 +72,25 @@ h4:hover, .work li:hover {
     color: white;
 }
 
+.work-heading h4 {
+    text-decoration: underline;
+}
+
+.work-heading h4:hover {
+    text-decoration: none;
+}
+
 .work-contain {
     padding: 2vmax;
 }
 
 .live-demo a {
-    text-decoration: underline;
     color: white;
-    text-shadow: 2px 3px #ef4f4f, 2px 5px #74c7b8;
 }
 
 
 .live-demo a:hover{
-    text-shadow: 2px 3px #74c7b8, 2px 5px #ef4f4f;
+    text-decoration: underline;
 }
 
 .site-projects {

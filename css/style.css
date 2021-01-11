@@ -6,9 +6,16 @@ h1 {
     text-shadow: 2px 2px black;
 }
 
-/* p, li {
+.skills, .personal-projects {
     font-family: 'Karla', sans-serif;
-} */
+    
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+
+}
+
 
 .success__message {
     display: none;
@@ -131,6 +138,9 @@ td, tr, th {
     margin-bottom: 100px;
 }
 
+.skill-list {
+    padding: 5px;
+}
 .skills__container {
     display: flex;
     justify-content: space-around;
@@ -277,6 +287,9 @@ td, tr, th {
         height: 200px;
     }
 
+    .skills__container {
+        justify-content: center;
+    }
 
     /* .random-projects-table td th {
         height: 100px;

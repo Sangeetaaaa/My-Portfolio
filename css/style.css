@@ -1,0 +1,300 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-shadow: 2px 2px black;
+}
+
+.skills, .personal-projects {
+    font-family: 'Karla', sans-serif;
+    
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.success__message {
+    display: none;
+}
+
+
+.failure__message {
+    display: none;
+}
+
+.header {
+    background: url("bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    color: white;
+}
+
+.navbar {
+    font-weight: bolder;
+    /* position: fixed; */
+    z-index: 2;
+}
+
+.navbar-black {
+    color: white;
+    background-color: #191919;
+}
+
+.navbar-white {
+    color: white;
+    background-color: transparent;
+}
+
+.header h1 {
+    font-weight: bolder;
+    font-size: 8vmin;
+    padding-top: 25vmin;
+    letter-spacing: 3px;  
+}
+
+
+
+.header p {
+    transition: 0.6s ease;
+}
+
+.social-icons {
+    font-size: 3vmin;
+    letter-spacing: 4px;
+    font-weight: bolder;
+}
+
+.social-icons a {
+    color: white;
+}
+
+.social-icons-black a {
+    color: black;
+}
+
+.social-icons-black a:hover {
+    text-decoration: none;
+    color: #222;
+}
+
+.social-icons a:hover {
+    text-decoration: none;
+    color: #222;
+}
+
+
+.work {
+    padding: 15vmin;
+    background-color: #191919;
+    color: white;
+}
+
+
+.work-contain {
+    padding: 2vmax;
+}
+
+.live-demo a {
+    color: white;
+}
+
+
+.live-demo a:hover{
+    text-decoration: underline;
+}
+
+.read-more-content {
+    display: none;
+}
+
+.link {
+    color: black;
+    text-decoration: underline;
+}
+
+
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+
+table {
+    border: 1px solid #191919;
+    padding: 30px;
+}
+
+td, tr, th {
+    border: 1px solid #191919;
+    padding: 10px;
+}
+
+.skills {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.skill-list {
+    padding: 5px;
+}
+.skills__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* .skill-list {
+    padding: 5px;
+} */
+
+.contact {
+    background-color: #191919;
+    margin-top: 100px;
+}
+.contact div {
+    padding: 15vmin;
+    color: white;
+    letter-spacing: 2px;
+}
+
+
+.capture-heading h2 {
+    margin-top: 100px;
+}
+
+.capture-heading {
+    margin-bottom: 200px;
+}
+
+
+.r {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .c {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .c img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .capture-img:hover {
+      transform: scale(1.2);
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .c {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .c {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .header {
+        padding: 0;
+        height: 600px;
+    }
+
+    .header h1 {
+        padding-top: 20vmax;
+        font-size: 7vmax;
+    }
+
+    .social-icons {
+        font-size: 7vmin;
+    }
+
+    .work {
+        padding: 3vmax;
+        padding-top: 10vmax;
+    }
+
+    .work h4 {
+        text-align: center;
+    }
+
+    .work-contain {
+        padding: 0;
+    }
+
+    .table {
+        width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    table {
+        overflow-x: scroll;
+        width: 100px;
+        height: 100px;
+    }
+    .icode-content-td {
+      height: 50px;  
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    
+    .icode-content {
+        overflow-x: scroll;
+        width: 300px;
+        height: 200px;
+    }
+
+    .gitty-des {
+        height: 50px;  
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .gitty-des div {
+        overflow-x: scroll;
+        width: 300px;
+        height: 200px;
+    }
+
+    .skills__container {
+        justify-content: center;
+    }
+
+    /* .random-projects-table td th {
+        height: 100px;
+        
+      overflow-x: auto;
+      overflow-y: hidden;
+    } */
+}

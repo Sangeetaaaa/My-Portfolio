@@ -27,9 +27,10 @@ h1, h2, h3 {
 }
 
 .header {
-    background: url("bg.jpeg");
+    /* background: url("bg.jpeg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: #191919;
     height: 800px;
     color: white;
 }
